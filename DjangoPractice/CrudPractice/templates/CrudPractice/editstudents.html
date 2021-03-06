@@ -1,0 +1,20 @@
+{% extends 'CrudPractice/index.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <h4 class="alert alert-primary text-center"> Update Your Details {{id}} </h4>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{editform}}
+        <button type="submit" class="btn btn-primary mt-3">Update</button>
+        <a href="{% url 'showStudents' %}" class="btn btn-primary mt-3" >Back to Home</a>
+
+
+    </form>
+</div>
+
+
+{% endblock content %}
